@@ -78,8 +78,6 @@ def find_optimal_route_for_single_van(van_stats: List[Tuple[int, int]], packages
     
     return selected_van, best_route, best_route_length, best_fuel_consumption
 
-if __name__ == "__main__":
-    create_gui()
 def create_gui():
     root = tk.Tk()
     root.title("Route Planner GUI")
@@ -171,3 +169,5 @@ def create_gui():
         results_text.delete(1.0, tk.END)
 
     root.mainloop()
+if __name__ == "__main__":
+    create_gui()
