@@ -118,25 +118,6 @@ def create_gui():
     control_frame = tk.Frame(root)
     control_frame.pack(pady=10)
 
-    calculate_button = tk.Button(control_frame, text="Calculate Route", command=calculate_route)
-    calculate_button.grid(row=0, column=0, padx=5)
-
-    reset_button = tk.Button(control_frame, text="Reset", command=reset_inputs)
-    reset_button.grid(row=0, column=1, padx=5)
-
-    exit_button = tk.Button(control_frame, text="Exit", command=root.quit)
-    exit_button.grid(row=0, column=2, padx=5)
-
-    # Results Display
-    results_frame = tk.Frame(root)
-    results_frame.pack(pady=10)
-
-    results_label = tk.Label(results_frame, text="Results")
-    results_label.pack()
-
-    results_text = tk.Text(results_frame, height=10, width=50)
-    results_text.pack()
-
     def add_package(pickup, delivery, weight):
         # Function to add package details to a list or display
         pass
@@ -167,6 +148,27 @@ def create_gui():
         delivery_entry.delete(0, tk.END)
         weight_entry.delete(0, tk.END)
         results_text.delete(1.0, tk.END)
+
+    calculate_button = tk.Button(control_frame, text="Calculate Route", command=calculate_route)
+    calculate_button.grid(row=0, column=0, padx=5)
+
+    reset_button = tk.Button(control_frame, text="Reset", command=reset_inputs)
+    reset_button.grid(row=0, column=1, padx=5)
+
+    exit_button = tk.Button(control_frame, text="Exit", command=root.quit)
+    exit_button.grid(row=0, column=2, padx=5)
+
+    # Results Display
+    results_frame = tk.Frame(root)
+    results_frame.pack(pady=10)
+
+    results_label = tk.Label(results_frame, text="Results")
+    results_label.pack()
+
+    results_text = tk.Text(results_frame, height=10, width=50)
+    results_text.pack()
+
+    # Removed function definitions to move them above button creation
 
     root.mainloop()
 if __name__ == "__main__":
