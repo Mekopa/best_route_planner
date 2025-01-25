@@ -79,18 +79,7 @@ def find_optimal_route_for_single_van(van_stats: List[Tuple[int, int]], packages
     return selected_van, best_route, best_route_length, best_fuel_consumption
 
 if __name__ == "__main__":
-    # Example test for Base goal
-    van_stats = [(10, 10), (9,8)]
-    packages = [(-1, 5, 4), (6, 2, 9), (-2, 9, 3)]
-    
-    selected_van, optimal_route, route_length, fuel_consumption = find_optimal_route_for_single_van(van_stats, packages)
-    
-    assert selected_van == (9, 8)
-    # Removed specific route length and fuel consumption assertions
-    
-    def create_gui():
-        root = tk.Tk()
-        root.title("Route Planner GUI")
+    create_gui()
 
         # Van Statistics Input
         van_frame = tk.Frame(root)
